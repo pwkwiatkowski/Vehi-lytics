@@ -56,6 +56,8 @@ function a(obj) {
 // });
 
 async function scrapeChannel(url) {
+    try {
+
     const cars = []
     
 // try{
@@ -132,7 +134,7 @@ async function scrapeChannel(url) {
         return cars;
     });
     // return cars.length;
-    return wynik;
+    return await wynik;
     // const promise = await Promise.all([]);
     // return promise;
     //prom.resolve(cars.length.toString())
@@ -155,6 +157,9 @@ async function scrapeChannel(url) {
     //     resolve(cars.length);
     // });
     //return promise;
+} catch(e){
+    return 'error';
+}
 }
 
 // function poRequescie() {
