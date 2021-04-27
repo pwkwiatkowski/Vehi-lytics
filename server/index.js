@@ -7,7 +7,8 @@ const cors = require('cors'); //moje
 const bodyParser = require('body-parser');
 //const scrapers = require('./scrapers');
 const scrapers = require('./scrapers2');
-const db = require('./db')
+const db = require('./db2');
+const { response } = require('express');
 
 app.use(cors()) //moje
 
@@ -19,18 +20,24 @@ app.use(function(req, res, next) {
 });
 
 app.get('/creators', async (req, res) => {
-    const creators = await db.getAllCreators();
-    res.send(creators);
+    const cars = await db.getAllCars();
+    res.send(cars);
 })
 
-app.post('/creators', async (req, res) => {
+app.post('/creators', (req, res) => {
     console.log(req.body);
-    const channelData = await scrapers.scrapeChannel(req.body.channelURL);
+    const channelData = scrapers.scrapeChannel(req.body.channelURL);
     //const creators = await db.insertCreator(channelData.name, channelData.avatarURL, req.body.channelURL);
     //trzeba wysłać do bazy każdy zescrapowany samochód, może w jakiejś pętli
     //const creators = await db.insertCreator(channelData.title, channelData.subtitle, channelData.year, channelData.price);
-    const creators = await db.insertCreator(channelData[0].title, channelData[0].subtitle, channelData[0].year, channelData[0].price);
-    res.send(creators);
+    //const cars = db.insertCar(channelData[0].title_tab, channelData[0].subtitle_tab, channelData[0].year_tab);
+    //channelData.then(result => console.log(result));
+    console.log(channelData)
+    channelData.then(result => console.log(result));
+    //channelData.then(res=> console.log(res))
+    // scrapers.poRequescie();
+    //console.log("prosto z cars ");
+    //res.send(cars);
 })
 
 app.listen(port, () => {
