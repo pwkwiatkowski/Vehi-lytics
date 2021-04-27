@@ -41,16 +41,9 @@ async function scrapeChannel(url) {
     try {
 
     const cars = []
-    
-// try{
 
-    // request(url, (error, response, html) => {
-        // if (!error && response.statusCode == 200) {
-            /*return*/const wynik = await axios.get(url).then((res) => {
+            const wynik = await axios.get(url).then((res) => {
 
-            
-
-            // const $ = cheerio.load(html);
             const $ = cheerio.load(res.data);
 
             $('.offer-item__content').each((i, el) => {
@@ -89,45 +82,25 @@ async function scrapeChannel(url) {
                     "year": year
                 };
                 cars.push(car);
-                //a(car);
-                console.log(title, '|', subtitle, '|', year, '|', mileage, '|', engine_capacity, '|', fuel_type, '|', city, '|', region, '|', price, '|', cars.length);
-                //return powinien być na koniec funkcji, ale jak to zrobić
-                //return {title, subtitle, year, mileage, engine_capacity, fuel_type, city, region, price}
-                //return cars;
 
-                //moze tutaj zrobic posta, zeby od razu kazdy zescrapowany samochod mi wrzucalo do bazy danych, w tym eachu
+                console.log(title, '|', subtitle, '|', year, '|', mileage, '|', engine_capacity, '|', fuel_type, '|', city, '|', region, '|', price, '|', cars.length);
             });
 
             console.log('Scraping Done...');
             console.log(cars.length);
 
-            // console.log('Dlugosc tablicy ' + cars.length);
-            //return cars;
-        //} //if
         console.log('po ifie ' + cars.length);
         // resolve(cars.length.toString());
-        //return poRequescie();
-        // promise = new Promise((resolve, reject) => {
-        //     resolve(cars.length);
-        // });
-        // // return promise;
         //resolve("cars.length.toString()");
         //resolve(cars.length.toString())
         return cars;
     });
-    // return cars.length;
+
     return await wynik;
     // const promise = await Promise.all([]);
     // return promise;
     //prom.resolve(cars.length.toString())
     //return prom;
-    //return cars;
-// }
-// catch(err) {
-//     console.log("Błąd");
-// }
-    //chyba tak powinno być
-    //return {title, subtitle, year, mileage, engine_capacity, fuel_type, city, region, price}
 
     //przez asynchronicznosc zwroci dlugosc tablicy rowna 1
     // finally {
