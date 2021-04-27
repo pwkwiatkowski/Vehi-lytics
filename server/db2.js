@@ -64,7 +64,7 @@ async function getAllCars() {
     return cars;
 }
 
-async function insertCar(title_param, subtitle_param, year_param) {
+async function insertCar(title, subtitle, year) {
     // const connection = await getConnection();
     mongoose.connect(
         "mongodb+srv://user1:zaq1@WSX@zupapomidorowa.ojeqd.mongodb.net/carBase?retryWrites=true&w=majority",
@@ -74,9 +74,9 @@ async function insertCar(title_param, subtitle_param, year_param) {
     //create
     const car = new Car();
     car._id = new mongoose.Types.ObjectId();
-    car.title = title_param;
-    car.subtitle = subtitle_param;
-    car.year = year_param;
+    car.title = title;
+    car.subtitle = subtitle;
+    car.year = year;
     car.save();
 
     const allCars = Car.find()
