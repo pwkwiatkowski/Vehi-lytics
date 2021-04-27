@@ -19,18 +19,18 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get('/creators', async (req, res) => {
+app.get('/cars', async (req, res) => {
     const cars = await db.getAllCars();
     res.send(cars);
 })
 
-app.post('/creators', async (req, res) => {
+app.post('/cars', async (req, res) => {
     console.log(req.body);
     const channelData = await scrapers.scrapeChannel(req.body.channelURL);
     //const creators = await db.insertCreator(channelData.name, channelData.avatarURL, req.body.channelURL);
     //trzeba wysłać do bazy każdy zescrapowany samochód, może w jakiejś pętli
     //const creators = await db.insertCreator(channelData.title, channelData.subtitle, channelData.year, channelData.price);
-    const cars = await db.insertCar(channelData[0].title_tab, channelData[0].subtitle_tab, channelData[0].year_tab);
+    const cars = await db.insertCar(channelData[0].title, channelData[0].subtitle, channelData[0].year);
     //channelData.then(result => console.log(result));
     //console.log(channelData[0].title_tab, channelData[0].subtitle_tab, channelData[0].year_tab)
     // channelData.then(result => console.log(result));

@@ -1,28 +1,10 @@
 const puppeteer = require('puppeteer');
 const request = require('request');
 const cheerio = require('cheerio');
-const fs = require('fs');
 const axios = require('axios');
-const { TIMEOUT } = require('dns');
 const { response } = require('express');
 const { resolve } = require('path');
 const { rejects } = require('assert');
-const writeStream = fs.createWriteStream('post.csv');
-
-//Wrtie Headers
-writeStream.write(`Price,Link,Date \n`);
-// var scrapedCars = {
-//     title: "",
-//     subtitle: "",
-//     year: ""
-// };
-// const cars = [
-//     {
-//         "title_tab": "some title",
-//         "subtitle_tab": "some subtitle",
-//         "year_tab": "some year"
-//     }
-//   ]
 
 function a(obj) {
     cars.push(obj);
@@ -72,14 +54,14 @@ async function scrapeChannel(url) {
             const $ = cheerio.load(res.data);
 
             $('.offer-item__content').each((i, el) => {
-                const title_test = $(el)
+                const title = $(el)
                     .find("h2")
                     .text()
                     .replace(/\s\s+/g, '');
-                const subtitle_test = $(el)
+                const subtitle = $(el)
                     .find('h3')
                     .text();
-                const year_test = $(el)
+                const year = $(el)
                     .find('ul > li[data-code="year"] > span')
                     .text();
                 const mileage = $(el)
@@ -102,13 +84,13 @@ async function scrapeChannel(url) {
                     .text();
 
                 car = {
-                    "title_tab": title_test,
-                    "subtitle_tab": subtitle_test,
-                    "year_tab": year_test
+                    "title": title,
+                    "subtitle": subtitle,
+                    "year": year
                 };
                 cars.push(car);
                 //a(car);
-                console.log(title_test, '|', subtitle_test, '|', year_test, '|', mileage, '|', engine_capacity, '|', fuel_type, '|', city, '|', region, '|', price, '|', cars.length);
+                console.log(title, '|', subtitle, '|', year, '|', mileage, '|', engine_capacity, '|', fuel_type, '|', city, '|', region, '|', price, '|', cars.length);
                 //return powinien być na koniec funkcji, ale jak to zrobić
                 //return {title, subtitle, year, mileage, engine_capacity, fuel_type, city, region, price}
                 //return cars;
@@ -161,11 +143,6 @@ async function scrapeChannel(url) {
     return 'error';
 }
 }
-
-// function poRequescie() {
-//     console.log('Dlugosc tablicy po requescie ' + cars.length)
-//     //return cars;
-// }
 
 module.exports = {
     scrapeChannel

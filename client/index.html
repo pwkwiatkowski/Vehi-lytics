@@ -6,26 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Setuptourist</h1>
+    <h1>Set up car</h1>
 
-    <h4>Add a new creator</h4>
-    <input class="channel-input" type="text" placeholder="paste YouTube url" />
-    <button type="submit" onclick="submitChannel()">sumbit</button>
+    <h4>Add some new cars</h4>
+    <input class="channel-input" type="text" placeholder="paste url to scrape" />
+    <button type="submit" onclick="submitURL()">sumbit</button>
 
     <div class="container"></div>
 
     <script>
-        function submitChannel() {
+        function submitURL() {
             const channelURL = document.querySelector('.channel-input').value;
             //send to server
-            // fetch('http://localhost:3000/creators', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({channelURL})
-            // })
-            fetch('http://localhost:3000/creators', {
+            fetch('http://localhost:3000/cars', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,13 +37,7 @@
             return el;
         }
 
-        //to jest na sztywno, teraz łączymy się z api
-        // const creators = [
-        //     {name: 'Code Drip', img: 'https://'},
-        //     {name: 'Dave Lee', img: 'https://'},
-        //     {name: 'MKBHD', img: 'https://'},
-        // ]
-        async function loadCreators() {
+        async function loadCars() {
             const res = await fetch('http://localhost:3000/creators');
             const creators = await res.json();
             
@@ -66,7 +53,7 @@
             })
         }
 
-        loadCreators();
+        loadCars();
         
     </script>
     <style>
