@@ -1,82 +1,63 @@
-const typeorm = require('typeorm');
+const mongoose = require('mongoose');
+const dotenv = require("dotenv")
 
-class Creator {
-    constructor(id, name, img, ytURL) {
-        this.id = id;
-        this.name = name;
-        this.img = img;
-        this.ytURL = ytURL;
+dotenv.config()
+
+const Car = require('./car');
+
+async function getAllCars() {
+    mongoose.connect(
+        'mongodb+srv://user1:' +
+        process.env.DB_PASSWORD +
+        '@zupapomidorowa.ojeqd.mongodb.net/carBase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }
+    )
+    // .then(() => {
+    //     console.log('MongoDB connected!!');
+    // }).catch(err => {
+    //     console.log('Failed to connect to MongoDB', err);
+    // });
+    //const cars = carSchema.find();
+
+    const cars = Car.find()
+        .then()
+        .catch();
+
+    return cars;
+}
+
+async function insertCar(insertedCar) {
+    try {
+        await mongoose.connect(
+            'mongodb+srv://user1:' +
+            process.env.DB_PASSWORD +
+            '@zupapomidorowa.ojeqd.mongodb.net/carBase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+        const car = new Car();
+        car._id = new mongoose.Types.ObjectId();
+        car.title = insertedCar.title;
+        car.subtitle = insertedCar.subtitle;
+        car.year = insertedCar.year;
+        car.mileage_in_km = insertedCar.mileage_in_km;
+        car.engine_capacity_cm3 = insertedCar.engine_capacity_cm3;
+        car.fuel_type = insertedCar.fuel_type;
+        car.city = insertedCar.city;
+        car.region = insertedCar.region;
+        car.price_PLN = insertedCar.price_PLN;
+        car.save();
+
+        console.log("samochód jako parametr")
+        console.log(insertedCar.title)
+
+        const allCars = Car.find()
+            .then()
+            .catch();
+
+        return await allCars;
+    } catch (err) {
+        console.log('Failed to connect to MongoDB', err);
     }
-}
-
-const EntitySchema = require("typeorm").EntitySchema;
-
-const CreatorSchema = new EntitySchema({
-    name: "Creator",
-    target: Creator,
-    columns: {
-        id: {
-            primary: true,
-            type: "int",
-            generated: true
-        },
-        name: {
-            type: "varchar"
-        },
-        img: {
-            type: "text"
-        },
-        ytURL: {
-            type: "text"
-        }
-    }
-});
-
-async function getConnection() {
-    return await typeorm.createConnection({
-        type: "mysql",
-        host: "localhost",
-        port: 3306,
-        username: "root",
-        password: "password",
-        database: "setuptourist",
-        synchronize: true,
-        logging: false,
-        entities: [
-            CreatorSchema
-        ]
-    })
-}
-
-async function getAllCreators() {
-    const connection = await getConnection();
-    const creatorRepo = connection.getRepository(Creator);
-    const creators = await creatorRepo.find();
-    connection.close();
-    return creators;
-}
-
-async function insertCreator(name, img, ytURL) {
-    const connection = await getConnection();
-
-    //create
-    const creator = new Creator();
-    creator.name = name;
-    creator.img = img;
-    creator.ytURL = ytURL;
-
-    //save
-    const creatorRepo = connection.getRepository(Creator);
-    const res = await creatorRepo.save(creator);
-    console.log('saved', res);
-
-    //return new list
-    const allCreators = await creatorRepo.find();
-    connection.close();
-    return allCreators;
 }
 
 module.exports = {
-    getAllCreators,
-    insertCreator
+    getAllCars,
+    insertCar
 }

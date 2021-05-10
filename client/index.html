@@ -38,15 +38,15 @@
         }
 
         async function loadCars() {
-            const res = await fetch('http://localhost:3000/creators');
-            const creators = await res.json();
+            const res = await fetch('http://localhost:3000/cars');
+            const cars = await res.json();
             
             const ctr = document.querySelector('.container');
 
-            creators.forEach(creator => {
+            cars.forEach(car => {
                 const card = newEl('div', {class: 'card'});
-                const title = newEl('h4', {innerText: creator.name});
-                const img = newEl('img', {src: creator.img});
+                const title = newEl('h4', {innerText: car.name});
+                const img = newEl('img', {src: car.img});
                 card.appendChild(title);
                 card.appendChild(img);
                 ctr.appendChild(card);
