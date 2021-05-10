@@ -24,9 +24,9 @@ Architektura rozwoju - stos technologiczny.
 Architektura uruchomieniowa  - stos technologiczny.
 
 ## Specification
-Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | #6 | #7 | #8 | #9 | #10 | #11
+Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-W1 | 1 - funkcjonalne | brak | Wybranie marki samochodu i wyświetlenie informacji | Użytkownik wybiera z jednej rozwijanej listy markę samochodu, po czym pojawia się lista z samochodami danej marki | 1 - wymagana | 285 | 287 | 287 | 272 | 276 | 269
+W1 | 1 - funkcjonalne | brak | Wybranie marki samochodu i wyświetlenie informacji | Użytkownik wybiera z jednej rozwijanej listy markę samochodu, po czym pojawia się lista z samochodami danej marki | 1 - wymagana | 
 
 ## Status
 Project is: _unfinished_ because we still working on it.
