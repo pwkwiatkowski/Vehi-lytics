@@ -1,5 +1,5 @@
-# JavaScriptMap
-> This is my university project for HTML and JavaScript classes.
+# Vehi-lytics
+> This is our university project.
 
 ## Table of contents
 * [General info](#general-info)
@@ -9,7 +9,7 @@
 * [Inspiration](#inspiration)
 
 ## General info
-The purpose of this project is indicate some points and mark some areas on the map, using HTML, JS and Leaflet library.
+The purpose of this project is increase our programming skills and learn some new technologies.
 
 ## Tech stack
 Architektura rozwoju - stos technologiczny.
@@ -24,12 +24,12 @@ Architektura rozwoju - stos technologiczny.
 Architektura uruchomieniowa  - stos technologiczny.
 
 ## Specification
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | #6 | #7 | #8 | #9 | #10 | #11
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+W1 | 1 - funkcjonalne | brak | Wybranie marki samochodu i wyświetlenie informacji | Użytkownik wybiera z jednej rozwijanej listy markę samochodu, po czym pojawia się lista z samochodami danej marki | 1 - wymagana | 285 | 287 | 287 | 272 | 276 | 269
 
 ## Status
-Project is: _finished_ because I sent it to my lecturer ;-)
+Project is: _unfinished_ because we still working on it.
 
 ## Source
-This project is from my lecturer, Mr Radomski.
+This project is for our lecture Inżynieria oprogramowania
