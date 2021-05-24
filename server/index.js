@@ -32,6 +32,15 @@ app.get('/cars', async(req, res) => {
     res.send(cars);
 })
 
+app.get('/compare', async(req, res) => {
+    res.sendFile(path.join(process.cwd(), '../client', 'comparer.html'));
+})
+
+app.post('/compare', function(req, res) {
+    var Passed_value = req.body;
+    console.log("Compared cars:" + Passed_value);
+});
+
 app.post('/cars', async(req, res) => {
     console.log(req.body);
     const carData = await scrapers.scrapeCar(req.body.channelURL);
