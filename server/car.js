@@ -12,7 +12,7 @@ const carSchema = mongoose.Schema({
     },
     year: {
         type: String,
-        //required: true,
+        required: true,
     },
     mileage_in_km: {
       type: String,
@@ -36,7 +36,7 @@ const carSchema = mongoose.Schema({
     },
     price_PLN: {
       type: String,
-      //required: true
+      required: true
     }
   });
 

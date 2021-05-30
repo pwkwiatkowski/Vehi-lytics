@@ -1,0 +1,26 @@
+[
+    { 
+        "_id": 1,
+        "title": "Audi A4",
+        "subtitle": "Bardzo dobra cena", 
+        "year": 2015,
+        "mileage_in_km": 200000, 
+        "engine_capacity_cm3": 1999, 
+        "fuel_type": "benzyna",
+        "city": "Warszawa",
+        "region": "Mazowieckie",
+        "price_PLN": 50000
+    },
+    { 
+        "_id": 2,
+        "title": "Audi A5",
+        "subtitle": "Bardzo zła cena", 
+        "year": 2015,
+        "mileage_in_km": 200000, 
+        "engine_capacity_cm3": 1999, 
+        "fuel_type": "benzyna",
+        "city": "Warszawa",
+        "region": "Mazowieckie",
+        "price_PLN": 50000
+    }
+]

@@ -1,27 +1,31 @@
 const mongoose = require('mongoose');
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
 
 dotenv.config()
 
 const Car = require('./car');
 
 async function getAllCars() {
+
     mongoose.connect(
         'mongodb+srv://user1:' +
         process.env.DB_PASSWORD +
         '@zupapomidorowa.ojeqd.mongodb.net/carBase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }
     )
-    // .then(() => {
-    //     console.log('MongoDB connected!!');
-    // }).catch(err => {
-    //     console.log('Failed to connect to MongoDB', err);
-    // });
+    .then(() => {
+        console.log('MongoDB connected!!');
+    }).catch(err => {
+        console.log('Failed to connect to MongoDB', err);
+    });//.finally(() => await mongoose.disconnect());
     //const cars = carSchema.find();
-
+    // await mongoose.disconnect()
     const cars = Car.find()
         .then()
         .catch();
+        //.finally(mongoose.connection.close());
 
+    // mongoose.connection.close();
+    //await mongoose.connection.close();
     return cars;
 }
 

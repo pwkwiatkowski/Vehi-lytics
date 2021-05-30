@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const cors = require('cors');
+const mongoose = require('mongoose');
 
 var path = require('path');
 
@@ -30,6 +31,7 @@ app.get('/controlpanel', function(req, res) {
 app.get('/cars', async(req, res) => {
     const cars = await db.getAllCars();
     res.send(cars);
+    //mongoose.disconnect();
 })
 
 app.post('/cars', async(req, res) => {
@@ -48,5 +50,7 @@ app.post('/cars', async(req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Example app listening at http://localhost:${port}`);
 })
+
+module.exports = {app}

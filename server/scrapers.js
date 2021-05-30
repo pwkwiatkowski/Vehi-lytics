@@ -95,17 +95,17 @@ async function scrapeCar(url) {
                     };
                     cars.push(car);
 
-                    console.log(title, '|', subtitle, '|', year, '|', mileage_in_km, '|', engine_capacity_cm3, '|', fuel_type, '|', city, '|', region, '|', price_PLN, '|', cars.length);
+                    //console.log(title, '|', subtitle, '|', year, '|', mileage_in_km, '|', engine_capacity_cm3, '|', fuel_type, '|', city, '|', region, '|', price_PLN, '|', cars.length);
                 });
 
-                console.log('Scraping Done...');
-                console.log(cars.length);
-                console.log('Tablica')
-                console.log(carBrandAndModels2[0][1][0])
-                console.log('Tablica linków')
-                console.log(links)
+                // console.log('Scraping Done...');
+                // console.log(cars.length);
+                // console.log('Tablica')
+                // console.log(carBrandAndModels2[0][1][0])
+                // console.log('Tablica linków')
+                // console.log(links)
 
-                console.log('po ifie ' + cars.length);
+                // console.log('po ifie ' + cars.length);
             });
         }
         return cars;
