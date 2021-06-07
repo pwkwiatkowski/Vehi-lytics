@@ -46,7 +46,7 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 
 ## Projekt (język UML)
 - Diagram przypadków użycia 
-<img src="https://github.com/pwkwiatkowski/Vehi-lytics/blob/master/img/diagram-przypadkow-uzycia.png" /> 
+<img src="https://github.com/pwkwiatkowski/Vehi-lytics/blob/master/img/diagram-przypadkow-uzycia.png" />  
 - Diagram wdrożenia 
 <img src="https://github.com/pwkwiatkowski/Vehi-lytics/blob/master/img/diagram-wdrozenia.png" />
 
