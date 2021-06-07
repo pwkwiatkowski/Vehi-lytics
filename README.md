@@ -69,6 +69,7 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 - Scenariusze testów.
 - Sprawozdanie z wykonania scenariuszy testów.
 
+Przeprowadzone testy były jednostkowymi testami manualnymi
 
 Identyfikator | Nazwa krótka | Opis | Priorytet | Czynności testowe | Wyniki testów | Status 
 --- | --- | --- | --- |--- |--- |--- |
