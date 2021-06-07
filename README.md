@@ -50,6 +50,7 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 - Diagram czynności dla każdego przypadku użycia
 - Diagram komponentów 
 - Diagram wdrożenia
+<img src="https://github.com/pwkwiatkowski/Vehi-lytics/blob/master/img/diagram-wdrozenia.png" />
 
 ## Architektura oprogramowania
 - Architektura rozwoju - stos technologiczny.
