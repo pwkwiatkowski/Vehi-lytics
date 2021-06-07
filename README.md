@@ -5,7 +5,7 @@
 * [Charakterystyka oprogramowania](#charakterystyka-oprogramowania)
 * [Prawa autorskie](#prawa-autorskie)
 * [Specyfikacja wymagań](#specyfikacja-wymagań)
-* [Projekt (język UML)](#projekt (język UML))
+* [Projekt (język UML)](#projekt-język-UML))
 * [Architektura systemu/oprogramowania](#architektura-systemu/oprogramowania)
 * [Testy](#testy)
 
