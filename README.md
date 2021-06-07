@@ -53,7 +53,7 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 
 ## Architektura oprogramowania
 - Architektura rozwoju - stos technologiczny.
-  - HTML - version 5.0
+  - HTML - wersja 5.0
   - JavaScript
   -	Node.js - request-promise module, CheerioJS
   -	NPM
@@ -63,6 +63,7 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
   -	Git i Github
 
 - Architektura uruchomieniowa  - stos technologiczny.
+  - Node.js z frameworkiem backend'owym Express.js
 
 ## Testy - odpowiedzialność: kontrola jakości.
 - Scenariusze testów.
