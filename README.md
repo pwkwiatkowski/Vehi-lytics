@@ -30,7 +30,7 @@ W5 | 1 - funkcjonalne | brak | Wyodrębnienie danych za pomocą web scrapingu | 
 W6 | 1 - funkcjonalne | brak | Zapisanie danych do bazy | Dodanie do bazy danych informacji o pojeździe | 1 - wymagana | 
 W7 | 1 - funkcjonalne | brak | Usunięcie danych z bazy | Usunięcie z bazy danych informacji o pojeździe | 1 - wymagana | 
 O1 | 1 - funkcjonalne | brak | Połączenie serwisu z bazą | Funkcjonalność pozwalająca na wyświetlenie informacji o pojazdach z bazy danych na stronie internetowej | 2 - oczekiwana | 
-D1 | 1 - funkcjonalne | brak | Wizualizacja danych związanych z analizą wybranych modeli samochodów | UZestawienie parametrów wybranych samochodów w formie graficznej np. wykres | 3 - dodatkowa | 
+D1 | 1 - funkcjonalne | brak | Wizualizacja danych związanych z analizą wybranych modeli samochodów | Zestawienie parametrów wybranych samochodów w formie graficznej np. wykres | 3 - dodatkowa | 
 
 - Wymagania niefunkcjonalne
 
