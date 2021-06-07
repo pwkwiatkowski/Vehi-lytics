@@ -6,7 +6,7 @@
 * [Prawa autorskie](#prawa-autorskie)
 * [Specyfikacja wymagań](#specyfikacja-wymagań)
 * [Projekt (język UML)](#projekt-język-UML)
-* [Architektura systemu/oprogramowania](#architektura-systemu/oprogramowania)
+* [Architektura systemu/oprogramowania](#architektura-systemu-oprogramowania)
 * [Testy](#testy)
 
 # Wymagane dokumenty
