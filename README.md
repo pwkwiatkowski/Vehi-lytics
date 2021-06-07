@@ -22,6 +22,8 @@
 
 ## Specyfikacja wymagań - odpowiedzialność: wizjoner.
 - Wymagania funkcjonalne
+
+
 Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
 --- | --- | --- | --- |--- |--- |
 W1 | 1 - funkcjonalne | brak | Wybranie marki samochodu i wyświetlenie informacji | Użytkownik wybiera z jednej rozwijanej listy markę samochodu, po czym pojawia się lista z samochodami danej marki | 1 - wymagana | 
