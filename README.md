@@ -50,7 +50,7 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 - Diagram komponentów 
 - Diagram wdrożenia
 
-## Architektura systemu/oprogramowania
+## Architektura oprogramowania
 - Architektura rozwoju - stos technologiczny.
   - HTML - version 5.0
   - JavaScript
