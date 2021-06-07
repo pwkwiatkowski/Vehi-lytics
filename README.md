@@ -1,36 +1,27 @@
 # Vehi-lytics
-> Jest to projekt na zajęcia Inżynierii oprogramowania realizowanych na uniwersytecie
+> Jest to projekt na zajęcia Inżynierii oprogramowania, realizowanych na uniwersytecie
 
 ## Spis treści
-* [General info](#general-info)
-* [Tech stack](#tech-stack)
-* [Specification](#specification)
-* [Status](#status)
-* [Inspiration](#inspiration)
+* [Charakterystyka  oprogramowania](#charakterystyka-oprogramowania)
+* [Prawa autorskie](#prawa-autorskie)
+* [Specyfikacja wymagań](#specyfikacja-wymagań)
+* [Projekt (język UML)](#projekt-(język-UML))
+* [Architektura systemu/oprogramowania](#architektura-systemu/oprogramowania)
+* [Testy](#testy)
 
 # Wymagane dokumenty
 
-## Charakterystyka  oprogramowania - odpowiedzialność: wizjoner.
+## Charakterystyka  oprogramowania
 - Nazwa skrócona - Vehi-lytics
 - Nazwa pełna - Vehi-lytics - oprogramowanie do analizy samochodów danej marki na bazie ogłoszeń na portalach ogłoszeniowych
 - Krótki opis ze wskazaniem celów - Vehi-lytics (Vehicle analytics) - oprogramowanie służy do wyodrębnienia z serwisów ogłoszeniowych informacji o samochodach danej marki oraz dokonania prostej analizy pod kątem parametrów takich jak cena, pojemność silnika, przebieg, rocznik, przyrostu ogłoszeń o danym modelu w danym okresie itd.
 
-## General info
-The purpose of this project is increase our programming skills and learn some new technologies.
+## Prawa autorskie
+- Autorzy - Inga Nowak, Patryk Kwiatkowski, Jakub Kąkol
+- Warunki licencyjne do oprogramowania wytworzonego przez grupę - udostępniamy oprogramowanie na licencji open source
 
-## Tech stack
-Architektura rozwoju - stos technologiczny.
-*   HTML - version 5.0
-*   JavaScript
-*	Node.js - request-promise module, CheerioJS
-*	NPM
-*	MongoDB
-*	Vue.js
-*	Visual Studio Code
-*	Git i Github
-Architektura uruchomieniowa  - stos technologiczny.
-
-## Specification
+## Specyfikacja wymagań - odpowiedzialność: wizjoner.
+- Wymagania funkcjonalne
 Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
 --- | --- | --- | --- |--- |--- |
 W1 | 1 - funkcjonalne | brak | Wybranie marki samochodu i wyświetlenie informacji | Użytkownik wybiera z jednej rozwijanej listy markę samochodu, po czym pojawia się lista z samochodami danej marki | 1 - wymagana | 
@@ -42,8 +33,34 @@ W7 | 1 - funkcjonalne | brak | Usunięcie danych z bazy | Usunięcie z bazy dany
 O1 | 1 - funkcjonalne | brak | Połączenie serwisu z bazą | Funkcjonalność pozwalająca na wyświetlenie informacji o pojazdach z bazy danych na stronie internetowej | 2 - oczekiwana | 
 D1 | 1 - funkcjonalne | brak | Wizualizacja danych związanych z analizą wybranych modeli samochodów | UZestawienie parametrów wybranych samochodów w formie graficznej np. wykres | 3 - dodatkowa | 
 
-## Status
-Project is: _unfinished_ because we still working on it.
+- Wymagania niefunkcjonalne
+Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
+--- | --- | --- | --- |--- |--- |
+WY1 | 2 - niefunkcjonalne | wydajność | Czas odpowiedzi | Maksymalny czas odpowiedzi aplikacji na zapytanie użytkownika nie może być dłuższy niż 1,5 sekundy | 1 - wymagana | 
+WY2 | 2 - niefunkcjonalne | wydajność | Czcionka | Aplikacja używa czcionki 11 pikseli. Przy rozdzielczości monitora full HD 1980x1020. | 1 - wymagana | 
+N1 | 2 - niefunkcjonalne | niezawodność | Dostępność aplikacji | Aplikacja będzie dostępna 24/7/365 średnio 99,9% czasu. W ciągu kolejnych 5 lat korzystania z niej. | 1 - wymagana | 
+WY3 | 2 - niefunkcjonalne | wydajność | Rozmiar aplikacji | Łączny rozmiar aplikacji, wraz z bazą danych, nie przekroczy 3GB | 1 - wymagana | 
+S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia po awarii nie powinien przekraczać godziny | 1 - wymagana | 
 
-## Source
-This project is for our lecture Inżynieria oprogramowania
+## Projekt (język UML)
+Diagram przypadków użycia 
+Diagram czynności dla każdego przypadku użycia
+Diagram komponentów 
+Diagram wdrożenia
+
+## Architektura systemu/oprogramowania
+- Architektura rozwoju - stos technologiczny.
+* HTML - version 5.0
+* JavaScript
+*	Node.js - request-promise module, CheerioJS
+*	NPM
+*	MongoDB
+*	Vue.js
+*	Visual Studio Code
+*	Git i Github
+
+- Architektura uruchomieniowa  - stos technologiczny.
+
+## Testy - odpowiedzialność: kontrola jakości.
+- Scenariusze testów.
+- Sprawozdanie z wykonania scenariuszy testów.
