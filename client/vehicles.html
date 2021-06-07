@@ -164,7 +164,6 @@
 
       methods: {
         addToCart(carId) {
-          isCartFull = false;
           this.cars.forEach(element => {
             if(element._id == carId)
             {
@@ -173,6 +172,7 @@
                 alert("Ten obiekt został już dodany.");
                 return;
               }
+              isCartFull = false;
               if(this.cart.length >= 2)
               {
                 this.cart = [];
