@@ -20,7 +20,7 @@
 - Autorzy - Inga Nowak, Patryk Kwiatkowski, Jakub Kąkol
 - Warunki licencyjne do oprogramowania wytworzonego przez grupę - udostępniamy oprogramowanie na licencji open source
 
-## Specyfikacja wymagań - odpowiedzialność: wizjoner.
+## Specyfikacja wymagań
 - Wymagania funkcjonalne
 
 Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
