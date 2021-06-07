@@ -2,7 +2,7 @@
 > Jest to projekt na zajęcia Inżynierii oprogramowania, realizowanych na uniwersytecie
 
 ## Spis treści
-* [Charakterystyka  oprogramowania](#charakterystyka-oprogramowania)
+* [Charakterystyka oprogramowania](#charakterystyka-oprogramowania)
 * [Prawa autorskie](#prawa-autorskie)
 * [Specyfikacja wymagań](#specyfikacja-wymagań)
 * [Projekt (język UML)](#projekt-(język-UML))
@@ -11,7 +11,7 @@
 
 # Wymagane dokumenty
 
-## Charakterystyka  oprogramowania
+## Charakterystyka oprogramowania
 - Nazwa skrócona - Vehi-lytics
 - Nazwa pełna - Vehi-lytics - oprogramowanie do analizy samochodów danej marki na bazie ogłoszeń na portalach ogłoszeniowych
 - Krótki opis ze wskazaniem celów - Vehi-lytics (Vehicle analytics) - oprogramowanie służy do wyodrębnienia z serwisów ogłoszeniowych informacji o samochodach danej marki oraz dokonania prostej analizy pod kątem parametrów takich jak cena, pojemność silnika, przebieg, rocznik, przyrostu ogłoszeń o danym modelu w danym okresie itd.
