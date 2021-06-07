@@ -70,6 +70,6 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 - Sprawozdanie z wykonania scenariuszy testów.
 
 
-Identyfikator | Nazwa krótka | Opis | Priorytet | Czynności testowe | Rezultaty | Status 
+Identyfikator | Nazwa krótka | Opis | Priorytet | Czynności testowe | Wyniki testów | Status 
 --- | --- | --- | --- |--- |--- |--- |
-T001 | Zwracanie tablicy z bazy danych | Sprawdzenie, czy z bazy danych zostaje zwrócona tablica z danymi umieszczanymi w serwisie | 1 | Pobranie listy samochodów z bazy danych i sprawdzenie, czy lista składa się z obiektów | 
+T001 | Zwracanie tablicy z bazy danych | Sprawdzenie, czy z bazy danych zostaje zwrócona tablica z danymi umieszczanymi w serwisie | 1 | Pobranie listy samochodów z bazy danych i sprawdzenie, czy lista składa się z obiektów | Rezulatat otrzymany z bazy danych składa się z obiektów | zaliczony
