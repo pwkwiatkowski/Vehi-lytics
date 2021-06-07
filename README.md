@@ -9,8 +9,6 @@
 * [Architektura oprogramowania](#architektura-oprogramowania)
 * [Testy](#testy)
 
-# Wymagane dokumenty
-
 ## Charakterystyka oprogramowania
 - Nazwa skrócona - Vehi-lytics
 - Nazwa pełna - Vehi-lytics - oprogramowanie do analizy samochodów danej marki na bazie ogłoszeń na portalach ogłoszeniowych
