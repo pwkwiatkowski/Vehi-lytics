@@ -52,14 +52,14 @@ Diagram wdrożenia
 
 ## Architektura systemu/oprogramowania
 - Architektura rozwoju - stos technologiczny.
-* HTML - version 5.0
-* JavaScript
-*	Node.js - request-promise module, CheerioJS
-*	NPM
-*	MongoDB
-*	Vue.js
-*	Visual Studio Code
-*	Git i Github
+  - HTML - version 5.0
+  - JavaScript
+  -	Node.js - request-promise module, CheerioJS
+  -	NPM
+  -	MongoDB
+  -	Vue.js
+  -	Visual Studio Code
+  -	Git i Github
 
 - Architektura uruchomieniowa  - stos technologiczny.
 
