@@ -1,12 +1,19 @@
 # Vehi-lytics
-> This is our university project.
+> Jest to projekt na zajęcia Inżynierii oprogramowania realizowanych na uniwersytecie
 
-## Table of contents
+## Spis treści
 * [General info](#general-info)
 * [Tech stack](#tech-stack)
 * [Specification](#specification)
 * [Status](#status)
 * [Inspiration](#inspiration)
+
+# Wymagane dokumenty
+
+## Charakterystyka  oprogramowania - odpowiedzialność: wizjoner.
+- Nazwa skrócona - Vehi-lytics
+- Nazwa pełna - Vehi-lytics - oprogramowanie do analizy samochodów danej marki na bazie ogłoszeń na portalach ogłoszeniowych
+- Krótki opis ze wskazaniem celów - Vehi-lytics (Vehicle analytics) - oprogramowanie służy do wyodrębnienia z serwisów ogłoszeniowych informacji o samochodach danej marki oraz dokonania prostej analizy pod kątem parametrów takich jak cena, pojemność silnika, przebieg, rocznik, przyrostu ogłoszeń o danym modelu w danym okresie itd.
 
 ## General info
 The purpose of this project is increase our programming skills and learn some new technologies.
