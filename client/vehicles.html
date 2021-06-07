@@ -195,9 +195,7 @@
             }
           });
           console.log(this.cart);
-          //TODO - uzywanie vue funkcji na przyciskach, by moc zrobic:
           //TODO - SORTOWANIE!
-          //TODO - POROWNYWANIE danych z biblioteka do wizualizacji
         },
 
         filterCars : function(arg) {
@@ -206,23 +204,7 @@
           this.cars = sortedCars;
           console.log(this.cars);
         },
-        /* //TODO - naprawic bug z type annotations, by moc bindowac funkcje do onclick eventu:
-        compareCars() : function(){
-          alert("Auto1: " + this.cart[0] + ", Auto2: " + this.cart[1]);
-        }
-        */
       }
-      // mounted: function(){
-      //     axios.get('https://jsonplaceholder.typicode.com/users')
-      //         .then(response => {
-      //             this.users = response.data;
-      //             console.log(response);
-      //         })
-      //         .catch(error => {
-      //             console.log(error);
-      //         });
-
-      // }
     })
   </script>
   <script>
@@ -248,7 +230,16 @@ var yearChart = new Chart(yearCanvas, {
             borderWidth: 1
         }]
     },
-    options: {}
+    options: {
+      scales: {
+        yAxes: [{
+            ticks: {
+                min: 1990,
+                max: 2025,
+            }
+        }]
+    }
+    }
 });
 var kmChart = new Chart(kmCanvas, {
     type: 'bar',
