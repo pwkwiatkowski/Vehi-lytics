@@ -5,7 +5,7 @@
 * [Charakterystyka oprogramowania](#charakterystyka-oprogramowania)
 * [Prawa autorskie](#prawa-autorskie)
 * [Specyfikacja wymagań](#specyfikacja-wymagań)
-* [Projekt (język UML)](#projekt-(język-UML))
+* [Projekt (język UML)](#projekt (język UML))
 * [Architektura systemu/oprogramowania](#architektura-systemu/oprogramowania)
 * [Testy](#testy)
 
@@ -45,10 +45,10 @@ WY3 | 2 - niefunkcjonalne | wydajność | Rozmiar aplikacji | Łączny rozmiar a
 S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia po awarii nie powinien przekraczać godziny | 1 - wymagana | 
 
 ## Projekt (język UML)
-Diagram przypadków użycia 
-Diagram czynności dla każdego przypadku użycia
-Diagram komponentów 
-Diagram wdrożenia
+- Diagram przypadków użycia 
+- Diagram czynności dla każdego przypadku użycia
+- Diagram komponentów 
+- Diagram wdrożenia
 
 ## Architektura systemu/oprogramowania
 - Architektura rozwoju - stos technologiczny.
