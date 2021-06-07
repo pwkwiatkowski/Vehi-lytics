@@ -19,7 +19,6 @@
   - niniejsze oprogramowanie udostępniamy na warunkach licencji Creative Common o nazwie Uznanie autorstwa 4.0 Międzynarodowe (CC BY 4.0). Teskt i podsumowanie licencji znajdują się pod tymi linkami:
     - https://creativecommons.org/licenses/by/4.0/legalcode.pl
     - https://creativecommons.org/licenses/by/4.0/deed.pl
-udostępniamy oprogramowanie na licencji open source
 
 ## Specyfikacja wymagań
 - Wymagania funkcjonalne
