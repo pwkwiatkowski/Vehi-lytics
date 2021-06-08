@@ -64,12 +64,14 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 - Architektura uruchomieniowa  - stos technologiczny.
   - Node.js z frameworkiem backend'owym Express.js
 
-## Testy - odpowiedzialność: kontrola jakości.
+## Testy
 - Scenariusze testów.
 - Sprawozdanie z wykonania scenariuszy testów.
 
 Przeprowadzone testy były jednostkowymi testami manualnymi
 
-Identyfikator | Nazwa krótka | Opis | Priorytet | Czynności testowe | Wyniki testów | Status 
+ID | Nazwa krótka | Opis | Priorytet | Czynności testowe | Wyniki testów | Status 
 --- | --- | --- | --- |--- |--- |--- |
-T001 | Zwracanie tablicy z bazy danych | Sprawdzenie, czy z bazy danych zostaje zwrócona tablica z danymi umieszczanymi w serwisie | 1 | Pobranie listy samochodów z bazy danych i sprawdzenie, czy lista składa się z obiektów | Rezulatat otrzymany z bazy danych składa się z obiektów | zaliczony
+T1 | Zwracanie tablicy z bazy danych | Sprawdzenie, czy z bazy danych zostaje zwrócona tablica z danymi umieszczanymi w serwisie | 1 | Pobranie listy samochodów z bazy danych i sprawdzenie, czy lista składa się z obiektów | Rezulatat otrzymany z bazy danych składa się z obiektów | zaliczony
+T2 | Utworzenie i zapisanie obiektu samochodu | Sprawdzenie, czy przykładowy obiekt samochodu zostanie zapisany do bazy oraz czy zapisane dane będą poprawne | 1 | Dodanie do bazy przykładowego obiektu samochodu i sprawdzenie oczekiwanych wartosci zwrotnych | Zapisane do bazy danych dane zgadzają się z oczekiwanymi | zaliczony
+T3 | Dodanie do bazy obiektu z polami spoza schematu | Sprawdzenie, czy można zapisać do bazy obiekt z polami niewystępującymi w schemacie | 1 | Dodanie do bazy przykładowego obiektu samochodu z niedozwolonym polem i sprawdzenie, czy to się powiedzie | Poprawne zapisanie do bazy obiektu, ale pola niewystępujące w schemacie są oznaczne jako undefined | zaliczony
