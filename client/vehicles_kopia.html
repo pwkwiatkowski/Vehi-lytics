@@ -29,9 +29,9 @@
             Marka
           </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="http://localhost:3000/opel">Opel</a>
-                        <a class="dropdown-item" href="http://localhost:3000/audi">Audi</a>
-                        <a class="dropdown-item" href="http://localhost:3000/ford">Ford</a>
+                        <a class="dropdown-item" href="#opel">Opel</a>
+                        <a class="dropdown-item" href="#bmw">BMW</a>
+                        <a class="dropdown-item" href="#ford">Ford</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -39,9 +39,9 @@
             Model
           </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="http://localhost:3000/astra">Astra</a>
-                        <a class="dropdown-item" href="http://localhost:3000/corsa">Corsa</a>
-                        <a class="dropdown-item" href="http://localhost:3000/nova">Nova</a>
+                        <a class="dropdown-item" href="#astra">Astra</a>
+                        <a class="dropdown-item" href="#corsa">Corsa</a>
+                        <a class="dropdown-item" href="#nova">Nova</a>
                     </div>
                 </li>
             </ul>
@@ -154,11 +154,7 @@
       mounted: function () {
         axios.get('http://localhost:3000/cars')
           .then(response => {
-            var base = window.location.href.replace('http://localhost:3000/','').trim();
-            var filter = base.charAt(0).toUpperCase() + base.slice(1);
             this.cars = response.data;
-            var filteredCars = this.cars.filter(e => e.title.includes(filter));
-            this.cars = filteredCars;
             console.log(this.cars);
           })
           .catch(error => {
@@ -200,7 +196,14 @@
           });
           console.log(this.cart);
           //TODO - SORTOWANIE!
-        }
+        },
+
+        filterCars : function(arg) {
+          console.log('test');
+          var sortedCars = this.cars.where(element => element.subtitle.Contains(filter));
+          this.cars = sortedCars;
+          console.log(this.cars);
+        },
       }
     })
   </script>

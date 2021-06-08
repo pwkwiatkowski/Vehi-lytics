@@ -53,4 +53,30 @@ app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 })
 
+//--- START
+app.get('/opel', function(req, res) {
+    res.sendFile(path.join(process.cwd(), '../client', 'vehicles.html'));
+})
+
+app.get('/audi', function(req, res) {
+    res.sendFile(path.join(process.cwd(), '../client', 'vehicles.html'));
+})
+
+app.get('/ford', function(req, res) {
+    res.sendFile(path.join(process.cwd(), '../client', 'vehicles.html'));
+})
+
+app.get('/astra', function(req, res) {
+    res.sendFile(path.join(process.cwd(), '../client', 'vehicles.html'));
+})
+
+app.get('/corsa', function(req, res) {
+    res.sendFile(path.join(process.cwd(), '../client', 'vehicles.html'));
+})
+
+app.get('/nova', function(req, res) {
+    res.sendFile(path.join(process.cwd(), '../client', 'vehicles.html'));
+})
+//---END
+
 module.exports = {app}
