@@ -62,7 +62,8 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
   -	Git i Github
 
 - Architektura uruchomieniowa  - stos technologiczny.
-  - Node.js z frameworkiem backend'owym Express.js
+  - Node.js z frameworkiem backend'owym Express.js - uruchomienie backend'u
+  - Live server działający w Visual Studio Code - uruchomienie frontend'u
 
 ## Testy
 - Scenariusze testów.
