@@ -25,23 +25,23 @@
 
 Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
 --- | --- | --- | --- |--- |--- |
-W1 | 1 - funkcjonalne | brak | Wybranie marki samochodu i wyświetlenie informacji | Użytkownik wybiera z jednej rozwijanej listy markę samochodu, po czym pojawia się lista z samochodami danej marki | 1 - wymagana | 
-W3 | 1 - funkcjonalne | brak | Wyświetlenie szczegółowych informacji | Po kliknięciu w odpowiedni przycisk wyświetlają się parametry pojazdu takie jak cena, pojemność silnika, przebieg itp. | 1 - wymagana | 
-W4 | 1 - funkcjonalne | brak | Porównanie wybranych modeli samochodów | Użytkownik wybiera modele do porównania, pojawia lista zestawionych parametrów wybranych modeli | 1 - wymagana | 
-W5 | 1 - funkcjonalne | brak | Wyodrębnienie danych za pomocą web scrapingu | Zebranie danych o samochodach ze stron internetowych | 1 - wymagana | 
-W6 | 1 - funkcjonalne | brak | Zapisanie danych do bazy | Dodanie do bazy danych informacji o pojeździe | 1 - wymagana | 
-O1 | 1 - funkcjonalne | brak | Połączenie serwisu z bazą | Funkcjonalność pozwalająca na wyświetlenie informacji o pojazdach z bazy danych na stronie internetowej | 2 - oczekiwana | 
-D1 | 1 - funkcjonalne | brak | Wizualizacja danych związanych z analizą wybranych modeli samochodów | Zestawienie parametrów wybranych samochodów w formie graficznej np. wykres | 3 - dodatkowa | 
+W1 | funkcjonalne | brak | Wybranie marki samochodu i wyświetlenie informacji | Użytkownik wybiera z jednej rozwijanej listy markę samochodu, po czym pojawia się lista z samochodami danej marki | wymagana | 
+W3 | funkcjonalne | brak | Wyświetlenie szczegółowych informacji | Po kliknięciu w odpowiedni przycisk wyświetlają się parametry pojazdu takie jak cena, pojemność silnika, przebieg itp. | wymagana | 
+W4 | funkcjonalne | brak | Porównanie wybranych modeli samochodów | Użytkownik wybiera modele do porównania, pojawia się lista zestawionych parametrów wybranych modeli | wymagana | 
+W5 | funkcjonalne | brak | Wyodrębnienie danych za pomocą web scrapingu | Zebranie danych o samochodach ze stron internetowych | wymagana | 
+W6 | funkcjonalne | brak | Zapisanie danych do bazy | Dodanie do bazy danych informacji o pojeździe | wymagana | 
+W7 | funkcjonalne | brak | Odczyt danych z bazy | Funkcjonalność pozwalająca na wyświetlenie informacji o pojazdach z bazy danych na stronie internetowej | wymagana | 
+D1 | funkcjonalne | brak | Wizualizacja danych związanych z analizą wybranych modeli samochodów | Zestawienie parametrów wybranych samochodów w formie graficznej np. wykres | dodatkowa | 
 
 - Wymagania niefunkcjonalne
 
 Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
 --- | --- | --- | --- |--- |--- |
-WY1 | 2 - niefunkcjonalne | wydajność | Czas odpowiedzi | Maksymalny czas odpowiedzi aplikacji na zapytanie użytkownika nie może być dłuższy niż 1,5 sekundy | 1 - wymagana | 
-WY2 | 2 - niefunkcjonalne | wydajność | Czcionka | Aplikacja używa czcionki 11 pikseli. Przy rozdzielczości monitora full HD 1980x1020. | 1 - wymagana | 
-N1 | 2 - niefunkcjonalne | niezawodność | Dostępność aplikacji | Aplikacja będzie dostępna 24/7/365 średnio 99,9% czasu. W ciągu kolejnych 5 lat korzystania z niej. | 1 - wymagana | 
-WY3 | 2 - niefunkcjonalne | wydajność | Rozmiar aplikacji | Łączny rozmiar aplikacji, wraz z bazą danych, nie przekroczy 3GB | 1 - wymagana | 
-S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia po awarii nie powinien przekraczać godziny | 1 - wymagana | 
+WY1 | niefunkcjonalne | wydajność | Czas odpowiedzi | Maksymalny czas odpowiedzi aplikacji na zapytanie użytkownika nie może być dłuższy niż 2 sekundy | wymagana | 
+WY2 | niefunkcjonalne | wydajność | Czcionka | Aplikacja używa czcionki 20 pikseli. Przy rozdzielczości monitora full HD 1980x1020. | wymagana | 
+N1 | niefunkcjonalne | niezawodność | Dostępność aplikacji | Aplikacja będzie dostępna 24/7/365 średnio 99,9% czasu. W ciągu kolejnych 5 lat korzystania z niej. | wymagana | 
+WY3 | niefunkcjonalne | wydajność | Rozmiar aplikacji | Łączny rozmiar aplikacji, wraz z bazą danych, nie przekroczy 3GB | wymagana | 
+S1 | niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia po awarii nie powinien przekraczać godziny | wymagana | 
 
 ## Projekt (język UML)
 - Diagram przypadków użycia 
@@ -54,7 +54,7 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 - Architektura rozwoju - stos technologiczny.
   - HTML - wersja 5.0
   - JavaScript
-  -	Node.js - request-promise module, CheerioJS
+  -	Node.js - CheerioJS, mongoose, body-parser, Express.js
   -	NPM
   -	MongoDB
   -	Vue.js
@@ -64,11 +64,9 @@ S1 | 2 - niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomie
 - Architektura uruchomieniowa  - stos technologiczny.
   - Node.js z frameworkiem backend'owym Express.js - uruchomienie backend'u
   - Live server działający w Visual Studio Code - uruchomienie frontend'u
+  - MongoDB Atlas Database - przechowywanie i uruchomienie bazy danych
 
 ## Testy
-- Scenariusze testów.
-- Sprawozdanie z wykonania scenariuszy testów.
-
 Przeprowadzone testy były jednostkowymi testami manualnymi
 
 ID | Nazwa krótka | Opis | Priorytet | Czynności testowe | Wyniki testów | Status 
