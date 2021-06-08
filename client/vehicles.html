@@ -9,6 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
 
 <body>
@@ -60,28 +62,35 @@
                 </tr>
             </tbody>
         </table>
-        <div style="text-align: center; vertical-align: middle; margin-top: 20px;"><button type="button" class="btn btn-outline-primary" onclick="phCompare()">PORÓWNAJ</div>
+        <div style="text-align: center; vertical-align: middle; margin-top: 20px;"><button id="compareButton" type="button" class="btn btn-outline-primary" onclick="phCompare()">PORÓWNAJ</div>
+            <div class="col-8 offset-2">
+              <div id ="charts" class="card-body" style="display: none">
+                <canvas id="yearChart" width="5" height="5"></canvas>
+                <canvas id="kmChart" width="5" height="5"></canvas>
+                <canvas id="priceChart" width="5" height="5"></canvas>
+              </div>
+          </div>
         </div>
-    <div class="container mt-4" id="tab">
-        <table class="table table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Model</th>
-                    <th scope="col">Rok</th>
-                    <th scope="col">Opis</th>
-                    <th scope="col">Miasto</th>
-                    <th scope="col">Cena</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="car in cars">
-                    <th scope="row">{{car.title}}</th>
-                    <td>{{car.year}}</td>
-                    <td>{{car.subtitle}}</td>
-                    <td>{{car.city}}</td>
-                    <td>{{car.price_PLN}}</td>
-                    <td><button type="button" class="btn btn-outline-primary" v-on:click="addToCart(car._id)">Dodaj</td>
+            <div class="container mt-4" id="tab">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Model</th>
+                            <th scope="col">Rok</th>
+                            <th scope="col">Opis</th>
+                            <th scope="col">Miasto</th>
+                            <th scope="col">Cena</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="car in cars">
+                            <th scope="row">{{car.title}}</th>
+                            <td>{{car.year}}</td>
+                            <td>{{car.subtitle}}</td>
+                            <td>{{car.city}}</td>
+                            <td>{{car.price_PLN}}</td>
+                            <td><button type="button" class="btn btn-outline-primary" v-on:click="addToCart(car._id)">Dodaj</td>
         </tr>
 
       </tbody>
@@ -89,15 +98,50 @@
   </div>
 
   <script>
+    var areChartsVisible = false;
+    var isCartFull = false;
+    var years = [];
+    var kms = [];
+    var prices = [];
+
     function phCompare() {
-      alert("[DO IMPLEMENTACJI] Porównanie:");
+      var c = document.getElementById("charts");
+      if(areChartsVisible)
+      {
+        c.style.display = "none";
+        areChartsVisible = false;
+        document.getElementById('compareButton').innerText = 'PORÓWNAJ';
+      }
+      else
+      {
+        if(isCartFull == false)
+        {
+          alert("Nie można dokonać porównania dla mniej niż 2 samochodów.");
+          return;
+        }
+        refreshCharts();
+        c.style.display = "block";
+        areChartsVisible = true;
+        document.getElementById('compareButton').innerText = 'UKRYJ';
+      }
     }
 
-    function hideElemnentWithId(id)
-    {
-      var elementToHide = document.getElementById(id);
-      elementToHide.style.display = 'none';
-      //elementToHide.style.visibility = 'hidden';
+    function refreshCharts() {
+        yearChart.data.datasets[0].data = [years[0]];
+        yearChart.data.datasets[1].data = [years[1]];
+        yearChart.update();
+        kmChart.data.datasets[0].data = [kms[0]];
+        kmChart.data.datasets[1].data = [kms[1]];
+        kmChart.update();
+        priceChart.data.datasets[0].data = [prices[0]];
+        priceChart.data.datasets[1].data = [prices[1]];
+        priceChart.update();
+    }
+
+    function updateChartData(index, year, km, price) {
+      years[index] = year;
+      kms[index] = km;
+      prices[index] = price;
     }
 
     var tab = new Vue({
@@ -128,6 +172,7 @@
                 alert("Ten obiekt został już dodany.");
                 return;
               }
+              isCartFull = false;
               if(this.cart.length >= 2)
               {
                 this.cart = [];
@@ -138,37 +183,106 @@
               if(this.cart.length == 1)
               {
                 document.getElementById("firstCar").textContent = element.subtitle;
+                updateChartData(0, element.year, element.mileage_in_km, element.price_PLN);
               } else if(this.cart.length == 2)
               {
+                isCartFull = true;
                 document.getElementById("secondCar").textContent = element.subtitle;
+                updateChartData(1, element.year, element.mileage_in_km, element.price_PLN);
               }
+              refreshCharts();
               alert('Dodano obiekt do porównania');
             }
           });
           console.log(this.cart);
-          //TODO - link/okno do porownywania aut (comparer.html), jesli link to tez wysylanie tablicy w zapytaniu
-          //TODO - przycisk na porownywanie i metody porownujace
+          //TODO - SORTOWANIE!
         },
-        /* //TODO - naprawic bug z type annotations, by moc bindowac funkcje do onclick eventu:
-        compareCars() : function(){
-          alert("Auto1: " + this.cart[0] + ", Auto2: " + this.cart[1]);
-        }
-        */
-      }
-      // mounted: function(){
-      //     axios.get('https://jsonplaceholder.typicode.com/users')
-      //         .then(response => {
-      //             this.users = response.data;
-      //             console.log(response);
-      //         })
-      //         .catch(error => {
-      //             console.log(error);
-      //         });
 
-      // }
+        filterCars : function(arg) {
+          console.log('test');
+          var sortedCars = this.cars.where(element => element.subtitle.Contains(filter));
+          this.cars = sortedCars;
+          console.log(this.cars);
+        },
+      }
     })
   </script>
+  <script>
+var yearCanvas = document.getElementById('yearChart');
+var kmCanvas = document.getElementById('kmChart');
+var priceCanvas = document.getElementById('priceChart');
 
+var yearChart = new Chart(yearCanvas, {
+    type: 'bar',
+    data: {
+        labels: ['Rok'],
+        datasets: [{
+            label: 'Samochód #1',
+            data: [1999],
+            backgroundColor: ['tomato'],
+            borderColor: ['red'],
+            borderWidth: 1
+        }, {
+            label: 'Samochód #2',
+            data: [2003],
+            backgroundColor: ['gainsboro'],
+            borderColor: ['blue'],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+            ticks: {
+                min: 1990,
+                max: 2025,
+            }
+        }]
+    }
+    }
+});
+var kmChart = new Chart(kmCanvas, {
+    type: 'bar',
+    data: {
+        labels: ['Ilość km'],
+        datasets: [{
+            label: 'Samochód #1',
+            data: [1999],
+            backgroundColor: ['tomato'],
+            borderColor: ['red'],
+            borderWidth: 1
+        }, {
+            label: 'Samochód #2',
+            data: [2003],
+            backgroundColor: ['gainsboro'],
+            borderColor: ['blue'],
+            borderWidth: 1
+        }]
+    },
+    options: {}
+});
+var priceChart = new Chart(priceCanvas, {
+    type: 'bar',
+    data: {
+        labels: ['Cena'],
+        datasets: [{
+            label: 'Samochód #1',
+            data: [1999],
+            backgroundColor: ['tomato'],
+            borderColor: ['red'],
+            borderWidth: 1
+        }, {
+            label: 'Samochód #2',
+            data: [2003],
+            backgroundColor: ['gainsboro'],
+            borderColor: ['blue'],
+            borderWidth: 1
+        }]
+    },
+    options: {}
+});
+</script>
+  </script>
 </body>
 
 </html>
