@@ -54,7 +54,7 @@ S1 | niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia 
 - Architektura rozwoju - stos technologiczny.
   - HTML - wersja 5.0
   - JavaScript
-  -	Node.js - request-promise module, CheerioJS
+  -	Node.js - CheerioJS, mongoose, body-parser, Express.js
   -	NPM
   -	MongoDB
   -	Vue.js
