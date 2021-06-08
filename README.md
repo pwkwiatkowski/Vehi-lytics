@@ -38,7 +38,7 @@ D1 | funkcjonalne | brak | Wizualizacja danych związanych z analizą wybranych 
 Identyfikator | Kategoria wymagań | Podkategorie | Nazwa krótka | Opis | Priorytet | 
 --- | --- | --- | --- |--- |--- |
 WY1 | niefunkcjonalne | wydajność | Czas odpowiedzi | Maksymalny czas odpowiedzi aplikacji na zapytanie użytkownika nie może być dłuższy niż 2 sekundy | wymagana | 
-WY2 | niefunkcjonalne | wydajność | Czcionka | Aplikacja używa czcionki 11 pikseli. Przy rozdzielczości monitora full HD 1980x1020. | wymagana | 
+WY2 | niefunkcjonalne | wydajność | Czcionka | Aplikacja używa czcionki 20 pikseli. Przy rozdzielczości monitora full HD 1980x1020. | wymagana | 
 N1 | niefunkcjonalne | niezawodność | Dostępność aplikacji | Aplikacja będzie dostępna 24/7/365 średnio 99,9% czasu. W ciągu kolejnych 5 lat korzystania z niej. | wymagana | 
 WY3 | niefunkcjonalne | wydajność | Rozmiar aplikacji | Łączny rozmiar aplikacji, wraz z bazą danych, nie przekroczy 3GB | wymagana | 
 S1 | niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia po awarii nie powinien przekraczać godziny | wymagana | 
