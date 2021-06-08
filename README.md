@@ -67,9 +67,6 @@ S1 | niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia 
   - MongoDB Atlas Database
 
 ## Testy
-- Scenariusze testów.
-- Sprawozdanie z wykonania scenariuszy testów.
-
 Przeprowadzone testy były jednostkowymi testami manualnymi
 
 ID | Nazwa krótka | Opis | Priorytet | Czynności testowe | Wyniki testów | Status 
