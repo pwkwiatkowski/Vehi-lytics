@@ -64,7 +64,7 @@ S1 | niefunkcjonalne | solidność | Uruchomienie po awarii | Czas uruchomienia 
 - Architektura uruchomieniowa  - stos technologiczny.
   - Node.js z frameworkiem backend'owym Express.js - uruchomienie backend'u
   - Live server działający w Visual Studio Code - uruchomienie frontend'u
-  - MongoDB Atlas Database
+  - MongoDB Atlas Database - przechowywanie i uruchomienie bazy danych
 
 ## Testy
 Przeprowadzone testy były jednostkowymi testami manualnymi
